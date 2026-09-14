@@ -20,6 +20,9 @@ export default defineConfig(({ mode }) => {
         input: {
           desktop: resolve(import.meta.dirname, 'index.html'),
           light: resolve(import.meta.dirname, 'projects/LetThereBeLight/index.html'),
+          tox: resolve(import.meta.dirname, 'projects/tox-scan-pro/index.html'),
+          toxPrivacy: resolve(import.meta.dirname, 'projects/tox-scan-pro/privacy/index.html'),
+          toxSupport: resolve(import.meta.dirname, 'projects/tox-scan-pro/support/index.html'),
         },
       },
     },

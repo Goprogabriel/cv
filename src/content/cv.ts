@@ -388,6 +388,48 @@ function makeCV(language: Language): CVContent {
         ],
       },
       {
+        id: 'tox-scan-pro',
+        url: `${import.meta.env.BASE_URL}projects/tox-scan-pro/`,
+        name: 'Tox Scan Pro',
+        category: t('AI-madanalyse til iPhone', 'AI food analysis for iPhone'),
+        year: t('iPhone-app', 'iPhone app'),
+        symbol: '◉',
+        accent: 'orange',
+        image: 'tox-scan-pro.png',
+        summary: t('Et klarere blik på din mad.', 'A clearer look at what’s on your plate.'),
+        description: t(
+          'AI-analyse af måltider og ingredienslister med mulige ingredienser, allergener, ernæringsmæssige forhold og usikkerhed. Informativ vejledning, ikke medicinsk rådgivning eller en garanti for fødevaresikkerhed.',
+          'AI analysis of meals and ingredient labels highlighting possible ingredients, allergens, nutritional concerns, and uncertainty. Informational guidance, not medical advice or a guarantee of food safety.',
+        ),
+        stack: [
+          'React Native',
+          'Expo',
+          'TypeScript',
+          'Expo Router',
+          'Firebase Authentication',
+          'Firestore',
+          'Cloud Functions',
+          'App Check',
+          'OpenAI',
+          'RevenueCat',
+          'Apple StoreKit',
+        ],
+        highlights: [
+          t(
+            'Personlige allergi- og madpræferencer samt separate familieprofiler.',
+            'Personal allergy and food preferences with separate family profiles.',
+          ),
+          t(
+            'Kamera, fotobibliotek, gemte rapporter, favoritter og flere sprog.',
+            'Camera, photo library, saved reports, favorites, and multilingual support.',
+          ),
+          t(
+            'Tre velkomstscanninger, Plus-abonnementer, ekstra scanpakker og henvisningsbelønninger.',
+            'Three welcome scans, Plus subscriptions, additional scan packs, and referral rewards.',
+          ),
+        ],
+      },
+      {
         id: 'let-there-be-light',
         url: `${import.meta.env.BASE_URL}projects/LetThereBeLight/`,
         name: 'LetThereBeLight',

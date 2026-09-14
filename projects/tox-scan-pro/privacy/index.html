@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101926" />
+    <title>Tox Scan Pro Privacy Policy — Draft - Gabriel Back</title>
+    <meta
+      name="description"
+      content="Unpublished privacy-policy draft for owner review, based on the app source."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="%BASE_URL%favicon.svg" />
+    <link rel="stylesheet" href="/projects/tox-scan-pro/style.css" />
+  </head>
+  <body>
+    <header class="light-desktop-panel">
+      <a href="%BASE_URL%">← Gabriel OS</a><span>gabriel / projects / Tox Scan Pro</span
+      ><span class="light-panel-status">● iPhone app</span>
+    </header>
+    <div class="light-window-title">
+      <span>Tox Scan Pro Privacy Policy — Draft</span
+      ><a href="%BASE_URL%" aria-label="Close project and return to desktop">×</a>
+    </div>
+    <main id="main" class="tox-page">
+      <nav aria-label="Project navigation">
+        <a href="%BASE_URL%projects/tox-scan-pro/">Project</a
+        ><a href="%BASE_URL%projects/tox-scan-pro/privacy/">Privacy Policy (draft)</a
+        ><a href="%BASE_URL%projects/tox-scan-pro/support/">Support</a
+        ><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+          >Terms of Use</a
+        >
+      </nav>
+      <p class="eyebrow">TOX SCAN PRO / PRIVACY</p>
+      <h1>Privacy Policy</h1>
+      <aside class="notice">
+        <h2>Draft — not approved for publication</h2>
+        <p>
+          This is an implementation-based draft reviewed on 14 September 2026, not an effective
+          published policy. The owner must confirm the items below and the behavior of the released
+          app before publication or App Store submission.
+        </p>
+      </aside>
+      <section>
+        <h2>Data used by the app</h2>
+        <p>
+          Firebase Authentication provides an account identifier. Profile data may include a name,
+          age, gender, height, weight, goals, allergies, sensitivities, avoided ingredients, food
+          preferences, language, and family-member profiles. Firestore stores profiles, saved scan
+          reports, favorites, and account activity. The app also records terms acceptance, scan
+          allowances, subscription and purchase information, referral activity, and recovery
+          information.
+        </p>
+        <p>
+          The iPhone stores authentication and recovery credentials using secure device storage.
+          Camera and photo-library access supply images for scans; image processing creates
+          temporary device cache files.
+        </p>
+      </section>
+      <section>
+        <h2>Photo analysis and service providers</h2>
+        <p>
+          Photos are sent through authenticated Firebase Cloud Functions. The backend decodes images
+          in memory, strips metadata, and sends the processed image to OpenAI along with relevant
+          allergies, sensitivities, avoidance and diet choices, goals, age, concern level, and
+          output language. Selected personal details can be sensitive. The analysis request may use
+          a product web search; its instructions restrict search queries to product information and
+          exclude personal profile details.
+        </p>
+        <p>
+          The analysis path does not upload original photos to Firebase Storage. Saved history
+          contains reports and illustrative thumbnails. Requests to OpenAI use
+          <code>store: false</code>; this does not establish zero provider retention. Provider
+          retention and data controls still need confirmation.
+        </p>
+        <p>
+          Firebase supports authentication, database storage, server processing, App Check, and
+          analytics. RevenueCat and Apple StoreKit handle purchase validation and entitlements.
+          Apple DeviceCheck supports referral device-eligibility checks. Network-derived rate-limit
+          records and app/device verification help prevent abuse.
+        </p>
+      </section>
+      <section>
+        <h2>Analytics behavior</h2>
+        <p>
+          The current native app enables Firebase Analytics automatically on startup, without an
+          opt-in dialog. It reports allowlisted usage events such as screen views, onboarding
+          progress, scan outcomes, and purchase interactions. Firebase Analytics also uses
+          installation, device, and session information. The driver denies advertising storage,
+          advertising user data, and ad personalization.
+        </p>
+        <p>
+          Older documentation describes optional consent and withdrawal, but that does not match the
+          current controller. The owner must resolve the intended consent and withdrawal behavior
+          before this policy is finalized.
+        </p>
+      </section>
+      <section>
+        <h2>Retention and deletion</h2>
+        <p>
+          The source schedules personal profiles and scan reports for cleanup after 30 days of
+          inactivity. Initialization, profile saves, and accepted scans renew activity. Cleanup runs
+          hourly in batches, can defer around active work, and is also checked at account
+          initialization; this is not a guarantee of deletion at an exact deadline.
+        </p>
+        <p>
+          Account deletion removes the Firebase Auth user, personal profile, scan reports, and
+          attempt metadata. The client then recovers an empty account under the retained identity.
+          Billing and usage ledgers, recovery mappings, and referral antifraud records are outside
+          that personal-data cleanup. The referral implementation retains eligibility and redemption
+          records and uses persistent Apple device state to prevent repeated rewards. The reviewed
+          implementation does not establish a finite retention period for these remaining records.
+        </p>
+        <p>
+          No duration is asserted here for provider records, analytics, logs, backups, or local
+          image caches. Their retention and deletion controls require confirmation.
+        </p>
+      </section>
+      <section>
+        <h2>Contact and data requests</h2>
+        <p>
+          For privacy questions or help accessing, correcting, or deleting data, email
+          <a href="mailto:gaphbahe@gmail.com?subject=Tox%20Scan%20Pro%20Privacy"
+            >gaphbahe@gmail.com</a
+          >. Account deletion is available in the app’s Settings. Never email your recovery key.
+          Deleting an account does not cancel an Apple subscription.
+        </p>
+      </section>
+      <section class="notice">
+        <h2>Owner confirmation required before publishing</h2>
+        <ul>
+          <li>
+            Identify the responsible legal operator and required contact details; the portfolio
+            author’s name is not a confirmed legal identity.
+          </li>
+          <li>
+            Confirm the released app’s data flows, analytics consent and withdrawal controls,
+            applicable legal grounds, and handling of sensitive and family/child profile data.
+          </li>
+          <li>
+            Define justified retention and deletion/export handling for billing, recovery, referral
+            and device records, analytics, logs, backups, and local caches; verify the deployed
+            cleanup job.
+          </li>
+          <li>
+            Confirm provider arrangements, processing locations, international-transfer safeguards,
+            OpenAI account data controls, and actual sharing practices. No blanket no-sharing or
+            no-training assurance is made.
+          </li>
+          <li>
+            Confirm applicable user rights and request procedures, intended age/audience rules, and
+            an effective date; align the app disclosures and App Store privacy labels.
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <nav aria-label="Project navigation">
+          <a href="%BASE_URL%projects/tox-scan-pro/">Project</a
+          ><a href="%BASE_URL%projects/tox-scan-pro/privacy/">Privacy Policy (draft)</a
+          ><a href="%BASE_URL%projects/tox-scan-pro/support/">Support</a
+          ><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+            >Terms of Use</a
+          >
+        </nav>
+        <a href="%BASE_URL%">← Back to the CV desktop</a>
+      </footer>
+    </main>
+  </body>
+</html>

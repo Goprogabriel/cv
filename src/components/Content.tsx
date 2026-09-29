@@ -213,6 +213,41 @@ export function SectionContent({
         ))}
       </div>
     );
+  if (section === 'manifest')
+    return (
+      <article className="detail manifest-content">
+        <div className="eyebrow">{t('Et manifest i tre dele', 'A manifesto in three parts')}</div>
+        <h2>{t('Ti bud. Tre udgivelser.', 'Ten commandments. Three releases.')}</h2>
+        <p className="lead">
+          {t(
+            'Et personligt manifest med ti bud, præsenteret på stentavler. Buddene er endnu ikke offentliggjort; de bliver udgivet løbende over tre uger i oktober.',
+            'A personal manifesto with ten commandments, presented on stone tablets. The commandments have not been published yet; they will be released over three weeks in October.',
+          )}
+        </p>
+        <img
+          className="manifest-image"
+          src={`${import.meta.env.BASE_URL}images/manifest-tablets.png`}
+          alt={t('Gabriel holder tre stentavler ved havet', 'Gabriel holding three stone tablets by the sea')}
+          loading="lazy"
+        />
+        <h3>{t('Udgivelser', 'Releases')}</h3>
+        <div className="manifest-dates" aria-label={t('Udgivelsesdatoer', 'Release dates')}>
+          {['02.10.2026', '09.10.2026', '16.10.2026'].map((date, index) => (
+            <div className="manifest-date" key={date}>
+              <span className="manifest-file-icon" aria-hidden="true">▤</span>
+              <div className="manifest-file-copy">
+                <strong>{t(`Stentavle ${index + 1}`, `Stone tablet ${index + 1}`)}</strong>
+                <span>{t(`Udgives ${date}`, `Releases ${date}`)}</span>
+              </div>
+              <span className="manifest-status">{t('Kommer snart', 'Coming soon')}</span>
+            </div>
+          ))}
+        </div>
+        <p className="demo-note">
+          {t('Følg med her, når de ti bud bliver offentliggjort.', 'Check back here as the ten commandments are published.')}
+        </p>
+      </article>
+    );
   if (section === 'contact')
     return (
       <article className="detail contact-content">

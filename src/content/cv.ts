@@ -1,5 +1,5 @@
 export type Language = 'da' | 'en';
-export type Section = 'about' | 'projects' | 'experience' | 'skills' | 'contact' | 'cv';
+export type Section = 'about' | 'projects' | 'experience' | 'skills' | 'manifest' | 'contact' | 'cv';
 export type AppId = Section | 'terminal' | 'browser' | 'files' | 'editor' | 'settings';
 export interface Project {
   id: string;
@@ -754,6 +754,11 @@ export function getSections(
       id: 'skills',
       label: t('Kompetencer', 'Skills'),
       description: t('Værktøjerne bag arbejdet', 'The tools behind the work'),
+    },
+    {
+      id: 'manifest',
+      label: 'Manifest',
+      description: t('Ti bud på stentavler · offentliggøres i oktober', 'Ten commandments on stone tablets · released in October'),
     },
     {
       id: 'contact',

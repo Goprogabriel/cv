@@ -385,6 +385,7 @@ export default function App() {
     'experience',
     'about',
     'skills',
+    'manifest',
     'contact',
     'cv',
     'browser',

@@ -10,6 +10,7 @@ import {
   Folder,
   Settings2,
   NotebookPen,
+  ScrollText,
   type LucideProps,
 } from 'lucide-react';
 import type { AppId } from '../content/cv';
@@ -19,6 +20,7 @@ export function AppIcon({ id, ...props }: LucideProps & { id: AppId }) {
     projects: Code2,
     experience: BriefcaseBusiness,
     skills: Wrench,
+    manifest: ScrollText,
     contact: Mail,
     cv: FileText,
     terminal: Terminal,

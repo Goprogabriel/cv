@@ -3802,6 +3802,48 @@ kbd {
   border-radius: 6px;
   margin: 0 0 24px;
 }
+.manifest-content > h2 {
+  margin-bottom: 10px;
+}
+.manifest-image {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 42%;
+  border: 1px solid #7192b02c;
+  border-radius: 6px;
+  margin: 24px 0;
+}
+.manifest-dates {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #7d9cbc35;
+  border-bottom: 1px solid #7d9cbc35;
+}
+.manifest-date {
+  display: grid;
+  gap: 8px;
+  padding: 16px 12px;
+}
+.manifest-date + .manifest-date {
+  border-left: 1px solid #7d9cbc35;
+}
+.manifest-date strong {
+  color: #c7ddf4;
+  font: 500 16px 'JetBrains Mono', monospace;
+}
+.manifest-content .demo-note {
+  margin-top: 18px;
+}
+@media (max-width: 500px) {
+  .manifest-date {
+    padding: 12px 7px;
+  }
+  .manifest-date strong {
+    font-size: 12px;
+  }
+}
 .terminal-intro p {
   line-height: 1.8;
 }

@@ -48,10 +48,14 @@ import {
   type Point,
 } from './desktop';
 
-const startWindows = (): WindowState[] => [
-  {
-    id: 'terminal',
-    app: 'terminal',
+const startWindows = (): WindowState[] => {
+  const requestedSection = new URLSearchParams(window.location.search).get('section');
+  const section: Section | undefined = requestedSection === 'manifest' ? 'manifest' : undefined;
+  const app: AppId = section ?? 'terminal';
+  return [{
+    id: app,
+    app,
+    section,
     minimized: false,
     maximized: false,
     z: 1,
@@ -59,13 +63,13 @@ const startWindows = (): WindowState[] => [
       {
         x: Math.max(180, (innerWidth - 810) / 2),
         y: Math.max(80, (innerHeight - 620) / 2),
-        width: 810,
+        width: section ? 860 : 810,
         height: 620,
       },
       { width: innerWidth, height: innerHeight },
     ),
-  },
-];
+  }];
+};
 type ContextMenu = { x: number; y: number; id?: string; parentId: string | null };
 export default function App() {
   const { language, setLanguage, cv, sections, t } = useLocale();

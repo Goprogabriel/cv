@@ -5,10 +5,13 @@ const LocaleContext = createContext<{ language: Language; setLanguage: (value: L
 );
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
+    const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+    if (requestedLanguage === 'en' || requestedLanguage === 'da') return requestedLanguage;
     try {
-      return localStorage.getItem('gb-language') === 'en' ? 'en' : 'da';
+      const savedLanguage = localStorage.getItem('gb-language');
+      return savedLanguage === 'da' ? 'da' : 'en';
     } catch {
-      return 'da';
+      return 'en';
     }
   });
   useEffect(() => {

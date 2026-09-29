@@ -239,7 +239,7 @@ export function SectionContent({
                 <strong>{t(`Stentavle ${index + 1}`, `Stone tablet ${index + 1}`)}</strong>
                 <span>{t(`Udgives ${date}`, `Releases ${date}`)}</span>
               </div>
-              <span className="manifest-status">{t('Kommende', 'Upcoming')}</span>
+              <span className="manifest-status">{t('Kommer snart', 'Coming soon')}</span>
             </div>
           ))}
         </div>

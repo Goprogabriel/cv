@@ -3817,31 +3817,57 @@ kbd {
 }
 .manifest-dates {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid #7d9cbc35;
   border-bottom: 1px solid #7d9cbc35;
 }
 .manifest-date {
-  display: grid;
-  gap: 8px;
-  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 11px 12px;
 }
 .manifest-date + .manifest-date {
-  border-left: 1px solid #7d9cbc35;
+  border-top: 1px solid #7d9cbc35;
 }
-.manifest-date strong {
+.manifest-file-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #7192b04a;
+  border-radius: 5px;
+  color: #a8cef6;
+  font-size: 21px;
+}
+.manifest-file-copy {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+}
+.manifest-file-copy strong {
   color: #c7ddf4;
-  font: 500 16px 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 550;
+}
+.manifest-file-copy span {
+  color: #8ca6c0;
+  font: 11px 'JetBrains Mono', monospace;
+}
+.manifest-status {
+  color: #a7b7c9;
+  font-size: 10px;
+  border: 1px solid #7d9cbc35;
+  border-radius: 99px;
+  padding: 4px 8px;
 }
 .manifest-content .demo-note {
   margin-top: 18px;
 }
 @media (max-width: 500px) {
-  .manifest-date {
-    padding: 12px 7px;
-  }
-  .manifest-date strong {
-    font-size: 12px;
+  .manifest-status {
+    font-size: 9px;
+    padding: 4px 6px;
   }
 }
 .terminal-intro p {

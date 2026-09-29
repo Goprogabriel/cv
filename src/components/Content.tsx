@@ -230,11 +230,16 @@ export function SectionContent({
           alt={t('Gabriel holder tre stentavler ved havet', 'Gabriel holding three stone tablets by the sea')}
           loading="lazy"
         />
+        <h3>{t('Udgivelser', 'Releases')}</h3>
         <div className="manifest-dates" aria-label={t('Udgivelsesdatoer', 'Release dates')}>
           {['02.10.2026', '09.10.2026', '16.10.2026'].map((date, index) => (
             <div className="manifest-date" key={date}>
-              <span className="eyebrow">{t(`Del ${index + 1}`, `Part ${index + 1}`)}</span>
-              <strong>{date}</strong>
+              <span className="manifest-file-icon" aria-hidden="true">▤</span>
+              <div className="manifest-file-copy">
+                <strong>{t(`Stentavle ${index + 1}`, `Stone tablet ${index + 1}`)}</strong>
+                <span>{t(`Udgives ${date}`, `Releases ${date}`)}</span>
+              </div>
+              <span className="manifest-status">{t('Kommende', 'Upcoming')}</span>
             </div>
           ))}
         </div>

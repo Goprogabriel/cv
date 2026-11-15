@@ -821,6 +821,9 @@ export default function App() {
       <div className="desktop-bottom-note">
         <span className="status-dot" />
         {t('Alle systemer nysgerrige.', 'All systems curious.')}
+        <a href={`${import.meta.env.BASE_URL}sayso/privacy.html`}>
+          {t('sayso privatliv', 'sayso privacy')}
+        </a>
         <button onClick={() => togglePopover('guide')}>
           {t('Højreklik for at udforske', 'Right-click to explore')}
           <CircleHelp size={11} />
